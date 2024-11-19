@@ -18,22 +18,9 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     
-    {/* <BrowserRouter> */}
     <App/>
-     {/* <N /> */}
-     {/* <NotificationComponent /> */}
-     {/* <LifeCycle LastName={"Said Lhodod"}/> */}
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Projects" element={<Projects />} />
-        <Route path="/Blog" element={<Blog />} />
-      </Routes>
-    </BrowserRouter> */}
-  </React.StrictMode>
+     
 );
 
 // If you want to start measuring performance in your app, pass a function
