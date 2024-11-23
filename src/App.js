@@ -10,7 +10,6 @@ const App = () => {
   const [inp, setinp] = useState([]);
   const [out, setout] = useState([]);
   const [secret, setsecret] = useState([]);
-  const [I, setI] = useState(0);
   useEffect(()=>{
     setsecret(getWord())
     setinp([...inp,secret.map((p,i)=>i===0?p:'')])
@@ -26,11 +25,11 @@ const App = () => {
               <input  value={p} disabled={out[i][j]===""?"disabled":""} style={{background:out[i][j],width:'20px',height:'20px'}}/>
             })
 
-          }{setI(i)}<br/>
+          }<br/>
           </>
         )
       })}
-      <input className="btn btn-primart" onClick={()=>submit(I,setI,inp,setinp,out,setout,secret,setsecret)} value={'ajoute'}/>
+      <input className="btn btn-primart" onClick={()=>submit(inp,setinp,out,setout,secret,setsecret)} value={'ajoute'}/>
     </>
   );
 };
