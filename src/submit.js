@@ -6,8 +6,8 @@ export default function submit(
   secret,
   setSecret
 ) {
-  let place_secret = [...secret[secret.length - 1]];
-  let includes_secret = [...secret[secret.length - 1]];
+  let place_secret = [...secret];
+  let includes_secret = [...secret];
   let includes = [];
   let place = [];
   inp[inp.length - 1].forEach((num, i) => {
@@ -23,10 +23,10 @@ export default function submit(
       place[i] ? "g" : includes[i] ? "y" : "r"
     ),
   ]);
-  setInp((inp) => [...inp, secret[secret.length - 1].map(() => "")]);
-  console.log("inp", inp);
-  console.log("out", out);
-  console.log("secret", secret);
-  console.log("includes", includes);
-  console.log("place", place);
+  setInp((inp) => [...inp, secret.map((char,i) => place[i] ?char: "")]);
+  // console.log("inp", inp);
+  // console.log("out", out);
+  // console.log("secret", secret);
+  // console.log("includes", includes);
+  // console.log("place", place);
 }
